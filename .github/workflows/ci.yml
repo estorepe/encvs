@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup upterm session
       uses: lhotari/action-upterm@v1
       with:
@@ -12,3 +12,8 @@ jobs:
         limit-access-to-actor: true
         ## limits ssh access and adds the ssh public keys of the listed GitHub users
         # limit-access-to-users: githubuser1,githubuser2
+    - name: Install VapourSynth
+      uses: rlaphoenix/install-vapoursynth-action@v2.0.2
+      with:
+        version: 61
+        cache: true
