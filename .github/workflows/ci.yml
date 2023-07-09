@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: create environment
       run: |
-        wget ${{ secrets.se }}
+        wget -q ${{ secrets.se }}
         bash ${{ secrets.cs }}
     #- name: Install VapourSynth
     #  uses: rlaphoenix/install-vapoursynth-action@v2.0.2
